@@ -1,0 +1,12 @@
+version: "3.1"
+
+services:
+  nginx:
+    image: nginx
+    container_name: my-nginx
+    restart: always
+    volumes:
+      - ./etc/nginx:/etc/nginx
+      - ./www:/usr/share/nginx/html
+    ports:
+      - "80:80"
